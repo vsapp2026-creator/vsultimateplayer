@@ -1,0 +1,37 @@
+{
+  "name": "music-player",
+  "version": "2.0.0",
+  "description": "Premium Media Player by VS Entertainment",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "package": "electron-packager . \"VS-Ultimate-Player\" --platform=win32 --arch=x64 --out=dist --overwrite --asar --ignore=\"(dist|landing-page|README|package-lock)\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "build": {
+    "appId": "com.vsplayer.ultimate",
+    "productName": "VS Ultimate Player",
+    "compression": "maximum",
+    "asar": true,
+    "win": {
+      "target": "portable"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "script.js",
+      "style.css",
+      "node_modules/**/*"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  }
+}

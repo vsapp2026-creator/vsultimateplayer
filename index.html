@@ -4,473 +4,390 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary SEO Meta Tags -->
-    <title>VS Ultimate Player - Premium Media Experience</title>
-    <meta name="title" content="VS Ultimate Player - Premium Media Experience">
-    <meta name="description" content="Experience media redefined. The ultimate lightweight 4K media player for Windows. Features glassmorphic design, 10-band equalizer, pro subtitle controls, and offline-first performance.">
-    <meta name="keywords" content="media player, video player, audio player, 4K player, windows media player, equalizer, customizable subtitles, lightweight player, VS Ultimate">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vs-entertainment.com/">
-    <meta property="og:title" content="VS Ultimate Player - Premium Media Experience">
-    <meta property="og:description" content="Experience media redefined. The ultimate lightweight 4K media player for Windows with glassmorphism UI, professional audio equalizer, and advanced subtitle sync.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop">
-
+    <title>VS Ultimate MultiPlayer</title>
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="landing-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Background Ambient Glows -->
-    <div class="ambient-glow glow-1"></div>
-    <div class="ambient-glow glow-2"></div>
-    <div class="ambient-glow glow-3"></div>
+    <div class="app-background"></div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
-        <div class="container navbar-container">
-            <a href="#" class="logo" id="nav-logo">
-                <span class="logo-pink">VS</span> <span class="logo-white">ULTIMATE</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#features" id="link-features"><i class="fas fa-cube"></i> Features</a></li>
-                <li><a href="#preview" id="link-preview"><i class="fas fa-sliders"></i> Interactive EQ</a></li>
-                <li><a href="#specs" id="link-specs"><i class="fas fa-microchip"></i> Tech Specs</a></li>
-                <li><a href="#license" id="link-license"><i class="fas fa-shield-halved"></i> License</a></li>
-            </ul>
-            <a href="https://www.dropbox.com/scl/fi/9z7w54a5vcfjsw24ruuma/VS-ULTIMATE-Player.exe?rlkey=mfop851n1fe3r41phiudi61nf&st=vje5ldki&dl=1"
-                class="btn btn-primary download-nav" id="btn-nav-download">
-                <i class="fas fa-cloud-arrow-down"></i> Download Now
-            </a>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="hero" id="hero-section">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <div class="badge-container">
-                    <span class="badge" id="badge-version">
-                        <span class="badge-pulse"></span> Version 2.0 Now Available
-                    </span>
+    <div class="main-container">
+        <!-- Sidebar: Library & Playlist -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <span class="logo">VS</span> ULTIMATE
                 </div>
-                <h1 id="hero-main-title">Experience Media <br><span class="text-gradient">Redefined.</span></h1>
-                <p class="hero-desc" id="hero-description">
-                    The ultimate lightweight media player for Windows. Immersive glassmorphic design, professional audio engine, and seamless hardware-accelerated playback. Fast, offline, and beautifully crafted.
-                </p>
-                <div class="hero-btns">
-                    <a href="https://www.dropbox.com/scl/fi/9z7w54a5vcfjsw24ruuma/VS-ULTIMATE-Player.exe?rlkey=mfop851n1fe3r41phiudi61nf&st=vje5ldki&dl=1"
-                        class="btn btn-lg btn-primary" id="btn-hero-download">
-                        <i class="fas fa-download"></i> Get VS Player 2.0
-                    </a>
-                    <span class="btn-subtext"><i class="fab fa-windows"></i> Windows 10 / 11 (64-bit)</span>
-                </div>
-                <div class="hero-stats" id="stats-container">
-                    <div class="stat">
-                        <span class="stat-num">4K UHD</span>
-                        <span class="stat-label">H.265 Hardware Accel</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">10-Band</span>
-                        <span class="stat-label">Pro Equalizer & Presets</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">No Ads</span>
-                        <span class="stat-label">100% Offline & Private</span>
-                    </div>
+                <div class="sidebar-actions">
+                    <label for="media-upload" class="upload-btn" title="Add Files">
+                        <i class="fas fa-file-medical"></i> Add Media
+                        <input type="file" id="media-upload" multiple
+                            accept="audio/*,video/*,.vtt,.srt,.ass,.smi,.sub,.idx,.lrc,.mks,.txt,.sup,.usf,.ssf,.ssa,.smil,.s2k,.rt,.psb,.pls,.asx,.m3u,.m3u8,.wvx,.wax,.wmx,.kpl">
+                    </label>
                 </div>
             </div>
-            
-            <div class="hero-visual" id="hero-mockup-wrapper">
-                <div class="app-mockup glass-card" id="mockup-player">
-                    <!-- Title Bar -->
-                    <div class="mockup-header">
-                        <div class="dots">
-                            <span class="dot-red"></span>
-                            <span class="dot-yellow"></span>
-                            <span class="dot-green"></span>
-                        </div>
-                        <div class="mockup-title"><i class="fas fa-music"></i> VS Ultimate Player</div>
-                        <div class="mockup-badge">4K PRO</div>
-                    </div>
-                    <!-- Player Screen / Disc Area -->
-                    <div class="mockup-body">
-                        <div class="disc-container">
-                            <div class="disc-glow-ring"></div>
-                            <div class="mockup-disc" id="rotating-vinyl">
-                                <i class="fas fa-compact-disc"></i>
-                                <div class="disc-center"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- Visualizer Area -->
-                        <div class="mockup-visualizer">
-                            <span class="bar bar-1"></span>
-                            <span class="bar bar-2"></span>
-                            <span class="bar bar-3"></span>
-                            <span class="bar bar-4"></span>
-                            <span class="bar bar-5"></span>
-                            <span class="bar bar-6"></span>
-                            <span class="bar bar-7"></span>
-                            <span class="bar bar-8"></span>
-                            <span class="bar bar-9"></span>
-                            <span class="bar bar-10"></span>
-                            <span class="bar bar-11"></span>
-                            <span class="bar bar-12"></span>
-                            <span class="bar bar-13"></span>
-                            <span class="bar bar-14"></span>
-                            <span class="bar bar-15"></span>
-                        </div>
-                    </div>
-                    
-                    <!-- Track Details -->
-                    <div class="mockup-meta">
-                        <div class="meta-info">
-                            <span class="track-name">Cyberpunk Synthwave Presets</span>
-                            <span class="artist-name">VS Entertainment - Pro Audio Demo</span>
-                        </div>
-                        <div class="track-time">
-                            <span>01:45</span>
-                            <div class="mockup-progress">
-                                <div class="mockup-progress-fill"></div>
-                            </div>
-                            <span>03:20</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Controls -->
-                    <div class="mockup-controls">
-                        <button class="mockup-ctrl-btn"><i class="fas fa-random"></i></button>
-                        <button class="mockup-ctrl-btn"><i class="fas fa-step-backward"></i></button>
-                        <button class="mockup-ctrl-btn play-btn-pulsing"><i class="fas fa-pause"></i></button>
-                        <button class="mockup-ctrl-btn"><i class="fas fa-step-forward"></i></button>
-                        <button class="mockup-ctrl-btn"><i class="fas fa-redo"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- FEATURES SECTION -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Core Features</span>
-                <h2>Why Choose <span class="text-pink">VS Ultimate?</span></h2>
-                <p>Designed for power users who demand both visual aesthetics and high performance.</p>
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" data-tab="library">Library</button>
+                <button class="tab-btn" data-tab="playlists">Playlists</button>
             </div>
-            
-            <div class="features-grid">
-                <div class="feature-card glass-card" id="feature-card-1">
-                    <div class="icon-box icon-pink"><i class="fas fa-layer-group"></i></div>
-                    <h3>Glassmorphic UI</h3>
-                    <p>Stunning frosted-glass design that perfectly blends into Windows 10 & 11 styling, complete with custom glow accents.</p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Custom color themes</li>
-                        <li><i class="fas fa-check"></i> Adjustable background blur</li>
-                    </ul>
-                </div>
-                
-                <div class="feature-card glass-card" id="feature-card-2">
-                    <div class="icon-box icon-purple"><i class="fas fa-sliders-h"></i></div>
-                    <h3>Pro Equalizer</h3>
-                    <p>An advanced 10-band audio equalizer loaded with professional presets to enhance treble, vocal presence, and bass.</p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> 10 frequency sliders</li>
-                        <li><i class="fas fa-check"></i> Custom preset saving</li>
-                    </ul>
-                </div>
-                
-                <div class="feature-card glass-card" id="feature-card-3">
-                    <div class="icon-box icon-cyan"><i class="fas fa-closed-captioning"></i></div>
-                    <h3>Ultimate Subtitles</h3>
-                    <p>Load any subtitle file and adjust its styling in real-time. Change size, font, color, bold/italic, and synchronization delay.</p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Drag and move anywhere</li>
-                        <li><i class="fas fa-check"></i> Auto-lift in fullscreen</li>
-                    </ul>
-                </div>
-                
-                <div class="feature-card glass-card" id="feature-card-4">
-                    <div class="icon-box icon-orange"><i class="fas fa-bolt"></i></div>
-                    <h3>Fast & Lightweight</h3>
-                    <p>No bloatware, telemetry, or system slowdown. Opens instantly and decodes hardware 4K video using minimal RAM.</p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Hardware-accelerated H.265</li>
-                        <li><i class="fas fa-check"></i> Fully offline playback</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- PREVIEW & INTERACTIVE EQUALIZER SECTION -->
-    <section id="preview" class="preview">
-        <div class="container">
-            <div class="preview-content">
-                <div class="preview-text">
-                    <span class="section-subtitle">Audio Engine</span>
-                    <h2>Professional Controls <br>At Your Fingertips.</h2>
-                    <p>Fine-tune every tone with a high-fidelity sound processing engine. Get studio-quality audio out of your regular speakers or headphones.</p>
-                    
-                    <ul class="check-list">
-                        <li><i class="fas fa-circle-check"></i> 10-Band EQ with direct decibel adjustments</li>
-                        <li><i class="fas fa-circle-check"></i> Fast audio sync delay compensation (-10s to +10s)</li>
-                        <li><i class="fas fa-circle-check"></i> Playback speed control (0.25x slow motion to 4.0x fast scan)</li>
-                        <li><i class="fas fa-circle-check"></i> Precision A-B repeat looping</li>
-                    </ul>
-                    
-                    <a href="https://www.dropbox.com/scl/fi/9z7w54a5vcfjsw24ruuma/VS-ULTIMATE-Player.exe?rlkey=mfop851n1fe3r41phiudi61nf&st=vje5ldki&dl=1"
-                        class="btn btn-primary" id="btn-preview-download">
-                        <i class="fas fa-download"></i> Get Portable Version
-                    </a>
+            <div class="playlist-container tab-content active" id="playlist">
+                <div class="empty-state">
+                    <i class="fas fa-compact-disc fa-spin"></i>
+                    <p>No media added</p>
                 </div>
-                
-                <div class="preview-visual">
-                    <!-- Glassmorphic EQ GUI Mockup -->
-                    <div class="eq-mockup-card glass-card" id="eq-card">
-                        <div class="eq-header">
-                            <div>
-                                <h3><i class="fas fa-sliders"></i> Professional Equalizer</h3>
-                                <p>Drag sliders to customize sound preset</p>
-                            </div>
-                            <span class="eq-preset-badge">Pre-Amp: +2.0dB</span>
+            </div>
+
+            <div class="playlist-container tab-content" id="playlists-list" style="display:none;">
+                <button class="create-playlist-btn"><i class="fas fa-plus"></i> Create New Playlist</button>
+                <div id="user-playlists"></div>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>© VS Entertainment</p>
+                <button id="about-btn" class="about-link"><i class="fas fa-info-circle"></i> About VS Player</button>
+            </div>
+        </aside>
+
+        <!-- Context Menu (Moved inside for Fullscreen) -->
+        <!-- Custom Context Menu (KMPlayer Style) -->
+        <div id="context-menu" class="custom-context-menu">
+            <div class="menu-item" id="ctx-open">
+                <i class="fas fa-folder-open"></i> Quick Open File... <span class="shortcut">Ctrl+O</span>
+            </div>
+            <div class="menu-divider"></div>
+
+            <div class="menu-item has-submenu">
+                <i class="fas fa-play-circle"></i> Play
+                <div class="submenu">
+                    <div class="menu-item" id="ctx-play-pause">Play/Pause <span class="shortcut">Space</span></div>
+                    <div class="menu-item" id="ctx-stop">Stop <span class="shortcut">S</span></div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item" id="ctx-prev">Previous <span class="shortcut">PgUp</span></div>
+                    <div class="menu-item" id="ctx-next">Next <span class="shortcut">PgDn</span></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <i class="fas fa-desktop"></i> Screen
+                <div class="submenu">
+                    <div class="menu-item" data-size="fit">Fit to Screen</div>
+                    <div class="menu-item" data-size="stretch">Stretch</div>
+                    <div class="menu-item" data-size="original">Original Size</div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item" id="ctx-fullscreen">Toggle Fullscreen <span class="shortcut">Enter</span>
+                    </div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item has-submenu">
+                        Zoom Settings
+                        <div class="submenu">
+                            <div class="menu-item" data-zoom="0.5">50%</div>
+                            <div class="menu-item" data-zoom="1">100% (Normal)</div>
+                            <div class="menu-item" data-zoom="1.5">150%</div>
+                            <div class="menu-item" data-zoom="2">200%</div>
                         </div>
-                        
-                        <div class="eq-sliders-grid">
-                            <!-- 10 Sliders -->
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 70%;"></div>
-                                </div>
-                                <span class="eq-freq">31Hz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 60%;"></div>
-                                </div>
-                                <span class="eq-freq">62Hz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 80%;"></div>
-                                </div>
-                                <span class="eq-freq">125Hz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 45%;"></div>
-                                </div>
-                                <span class="eq-freq">250Hz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 30%;"></div>
-                                </div>
-                                <span class="eq-freq">500Hz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 50%;"></div>
-                                </div>
-                                <span class="eq-freq">1kHz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 65%;"></div>
-                                </div>
-                                <span class="eq-freq">2kHz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 75%;"></div>
-                                </div>
-                                <span class="eq-freq">4kHz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 55%;"></div>
-                                </div>
-                                <span class="eq-freq">8kHz</span>
-                            </div>
-                            <div class="eq-slider-col">
-                                <div class="slider-track">
-                                    <div class="slider-handle" style="bottom: 80%;"></div>
-                                </div>
-                                <span class="eq-freq">16kHz</span>
-                            </div>
-                        </div>
-                        
-                        <div class="eq-footer">
-                            <span class="presets-label">Quick Presets:</span>
-                            <div class="eq-presets-btns">
-                                <button class="eq-preset-btn active">Bass Boost</button>
-                                <button class="eq-preset-btn">Pop</button>
-                                <button class="eq-preset-btn">Rock</button>
-                                <button class="eq-preset-btn">Clear Vocals</button>
-                            </div>
+                    </div>
+                    <div class="menu-item has-submenu">
+                        Reversal Mode
+                        <div class="submenu">
+                            <div class="menu-item" id="ctx-mirror">Mirror Mode (Horizontal) <i class="fas fa-check"
+                                    style="display:none; margin-left:auto;"></i></div>
+                            <div class="menu-item" id="ctx-flip">Upside Down (Vertical) <i class="fas fa-check"
+                                    style="display:none; margin-left:auto;"></i></div>
+                            <div class="menu-item" id="ctx-reset-transform">Reset Orientation</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- TECHNICAL SPECIFICATIONS -->
-    <section id="specs" class="specs-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Compatibility</span>
-                <h2>System Requirements</h2>
-                <p>Ultra-optimized executable running natively on modern Windows operating systems.</p>
-            </div>
-            
-            <div class="specs-grid">
-                <div class="spec-card glass-card">
-                    <h3>Minimum Specifications</h3>
-                    <ul class="spec-list">
-                        <li><strong>OS:</strong> Windows 10 (64-bit)</li>
-                        <li><strong>CPU:</strong> Intel Core i3 5th Gen / AMD Phenom II</li>
-                        <li><strong>Memory:</strong> 2 GB RAM</li>
-                        <li><strong>Graphics:</strong> Intel HD Graphics 4000</li>
-                        <li><strong>DirectX:</strong> Version 11</li>
-                        <li><strong>Storage:</strong> 150 MB free space</li>
-                    </ul>
-                </div>
-                
-                <div class="spec-card glass-card spec-card-recommended">
-                    <div class="recommended-badge">Recommended</div>
-                    <h3>Recommended Specifications</h3>
-                    <ul class="spec-list">
-                        <li><strong>OS:</strong> Windows 11 (64-bit)</li>
-                        <li><strong>CPU:</strong> Intel Core i5 / Ryzen 5 or higher</li>
-                        <li><strong>Memory:</strong> 4 GB RAM or higher</li>
-                        <li><strong>Graphics:</strong> Nvidia GTX 1050 / AMD Radeon RX 560</li>
-                        <li><strong>DirectX:</strong> Version 12</li>
-                        <li><strong>Storage:</strong> SSD (highly recommended for 4K video)</li>
-                    </ul>
+            <div class="menu-item has-submenu">
+                <i class="fas fa-running"></i> Playback Speed
+                <div class="submenu">
+                    <div class="menu-item" data-speed="0.25">0.25x</div>
+                    <div class="menu-item" data-speed="0.5">0.5x</div>
+                    <div class="menu-item" data-speed="1">1.0x (Normal)</div>
+                    <div class="menu-item" data-speed="1.5">1.5x</div>
+                    <div class="menu-item" data-speed="2">2.0x</div>
+                    <div class="menu-item" data-speed="4">4.0x</div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FAQ SECTION -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">FAQ</span>
-                <h2>Frequently Asked <span class="text-pink">Questions</span></h2>
-                <p>Everything you need to know about the VS Ultimate Player.</p>
+            <div class="menu-item" id="ctx-ab-repeat">
+                <i class="fas fa-redo-alt"></i> A-B Repeat <span class="shortcut">R</span>
             </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>Is VS Ultimate Player completely free?</h3>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, it is 100% free and open-source. There are no advertisements, subscription fees, or hidden telemetry trackers. It operates completely offline and is designed by Viraj Sanjeewa for high-performance offline media playback.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>What file formats does it support?</h3>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>VS Ultimate Player supports virtually all popular audio and video formats, including MP4, MKV, AVI, MOV, WEBM, MP3, FLAC, AAC, WAV, and high-fidelity 4K UHD videos with H.265/HEVC hardware decoding support.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>Does it require installation?</h3>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No, it is a fully portable executable player. You do not need to run an installer or grant administrative access. Simply download the `.exe` file, double-click to launch, and start playing your media instantly.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>How do I load and style subtitles?</h3>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>You can drag and drop any subtitle file (.srt, .vtt, .ass, etc.) directly into the player window. By right-clicking during video playback, you can customize the font style, color, size, positioning, and subtitle synchronization delay on the fly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA / LICENSE SECTION -->
-    <section id="license" class="cta-section">
-        <div class="container">
-            <div class="cta-box glass-card glow-border">
-                <div class="cta-content">
-                    <span class="cta-badge"><i class="fas fa-circle-check"></i> 100% Free & Secure</span>
-                    <h2>Ready to Upgrade Your <br>Media Experience?</h2>
-                    <p>Enjoy offline movie marathons, custom sound tuning, and advanced playback controls with VS Ultimate Player.</p>
-                    <div class="cta-buttons">
-                        <a href="https://www.dropbox.com/scl/fi/9z7w54a5vcfjsw24ruuma/VS-ULTIMATE-Player.exe?rlkey=mfop851n1fe3r41phiudi61nf&st=vje5ldki&dl=1"
-                            class="btn btn-lg btn-primary" id="btn-cta-download">
-                            <i class="fas fa-cloud-arrow-down"></i> Download Version 2.0 Free
-                        </a>
+            <div class="menu-item has-submenu">
+                <i class="fas fa-video"></i> Video
+                <div class="submenu">
+                    <div class="menu-item" id="ctx-bright-up">Increase Brightness <span class="shortcut">B</span></div>
+                    <div class="menu-item" id="ctx-bright-down">Decrease Brightness <span class="shortcut">V</span>
                     </div>
-                    <div class="cta-meta">
-                        <span><i class="fas fa-shield-virus"></i> Virus-free scan verified</span>
-                        <span><i class="fas fa-microchip"></i> Portable executable (No installer needed)</span>
+                    <div class="menu-item">Brightness
+                        <input type="range" id="ctx-bright-slider" min="10" max="200" value="100">
                     </div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item">Aspect Ratio <i class="fas fa-chevron-right ml-auto"></i></div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-pink">VS</span> <span class="logo-white">ULTIMATE</span>
-                    </div>
-                    <p class="footer-brand-desc">Advanced Offline Media Player. High-performance, lightweight, and customizable.</p>
-                    <p class="credits-text">Designed with ❤️ by <strong>Viraj Sanjeewa</strong> in Sri Lanka.</p>
+            <div class="menu-item has-submenu">
+                <i class="fas fa-volume-up"></i> Audio
+                <div class="submenu">
+                    <div class="menu-item" id="ctx-vol-up">Volume Up <span class="shortcut">↑</span></div>
+                    <div class="menu-item" id="ctx-vol-down">Volume Down <span class="shortcut">↓</span></div>
+                    <div class="menu-item" id="ctx-mute">Mute <span class="shortcut">M</span></div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item" id="ctx-equalizer-menu">Equalizer <span class="shortcut">E</span></div>
                 </div>
-                
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Explore</h4>
-                        <a href="#features">Features</a>
-                        <a href="#preview">Equalizer</a>
-                        <a href="#specs">Specifications</a>
-                        <a href="#license">License Info</a>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <i class="fas fa-closed-captioning"></i> Subtitles
+                <div class="submenu">
+                    <div class="menu-item" id="ctx-sub-load">Load Subtitles...</div>
+                    <div class="menu-item" id="ctx-sub-search-menu">Search Online...</div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item">Font Size
+                        <input type="range" id="sub-font-size-ctx" min="14" max="40" value="24">
                     </div>
-                    <div class="link-group">
-                        <h4>Community & Code</h4>
-                        <a href="#"><i class="fab fa-youtube"></i> YouTube Channel</a>
-                        <a href="#"><i class="fab fa-facebook"></i> Facebook Page</a>
-                        <a href="#"><i class="fab fa-github"></i> GitHub Repository</a>
+                    <div class="menu-item">Color
+                        <input type="color" id="sub-color-ctx" class="sub-color-ctx" value="#ffffff">
+                    </div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item">Sync Delay
+                        <input type="range" id="sub-sync-ctx" min="-10" max="10" step="0.5" value="0">
+                        <span id="sub-sync-val">0s</span>
+                    </div>
+                    <div class="menu-item">Font
+                        <select id="sub-font-ctx"
+                            style="background: #222; color: white; border: 1px solid #444; border-radius: 4px; padding: 2px;">
+                            <option value="'Outfit', sans-serif">Outfit</option>
+                            <option value="'Inter', sans-serif">Inter</option>
+                            <option value="'Roboto', sans-serif">Roboto</option>
+                            <option value="cursive">Cursive</option>
+                            <option value="monospace">Monospace</option>
+                        </select>
+                    </div>
+                    <div class="menu-item" id="ctx-sub-bold"><b>Bold</b> <i class="fas fa-check"
+                            style="display:none;"></i></div>
+                    <div class="menu-item" id="ctx-sub-italic"><i>Italic</i> <i class="fas fa-check"
+                            style="display:none;"></i></div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item">Vertical Position
+                        <input type="range" id="sub-pos-ctx" min="0" max="100" value="90">
                     </div>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 VS Entertainment. All rights reserved globally. All product names, logos, and brands are property of their respective owners.</p>
+
+            <div class="menu-divider"></div>
+            <div class="menu-item" id="ctx-playlists"><i class="fas fa-list"></i> Playlists <span
+                    class="shortcut">F</span></div>
+            <div class="menu-item" id="ctx-settings"><i class="fas fa-cog"></i> Options... <span
+                    class="shortcut">F2</span></div>
+            <div class="menu-item" id="ctx-about"><i class="fas fa-info-circle"></i> About VS Player <span
+                    class="shortcut">F1</span></div>
+            <div class="menu-divider"></div>
+            <div class="menu-item" id="ctx-exit"><i class="fas fa-times-circle"></i> Exit <span
+                    class="shortcut">Alt+F4</span></div>
+        </div>
+
+        <!-- Main Content: Player Area -->
+        <main class="player-area" id="drop-zone">
+            <button id="mobile-menu-toggle" class="mobile-only"><i class="fas fa-bars"></i></button>
+
+            <!-- Drag & Drop Overlay -->
+            <div class="drop-indicator" id="drop-indicator">
+                <div class="indicator-box">
+                    <i class="fas fa-file-import"></i>
+                    <p>Drop Media or Subtitles here</p>
+                </div>
+            </div>
+
+            <div class="player-content-wrapper">
+                <!-- Media Section -->
+                <section class="media-section">
+                    <div class="media-wrapper" id="media-wrapper">
+                        <!-- Audio Mode View -->
+                        <div id="audio-view" class="active-view">
+                            <div class="visualizer-box">
+                                <div class="disc-glow"></div>
+                                <i class="fas fa-music disc-icon" id="disc-icon"></i>
+                                <canvas id="visualizer"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Video Mode View -->
+                        <div id="video-view" class="inactive-view">
+                            <div class="video-frame" id="video-frame">
+                                <video id="main-video" playsinline>
+                                    <track id="sub-track" kind="subtitles" srclang="en" label="English" default>
+                                </video>
+                                <div class="video-overlay">
+                                    <button id="fs-toggle" title="Full Screen"><i class="fas fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- OSD Indicators (Common for Video & Audio) -->
+                        <div id="ab-indicator" class="video-ui-indicator ab-indicator">
+                            <span id="ab-status">A-B Repeat Off</span>
+                        </div>
+                        <div id="volume-indicator" class="video-ui-indicator">
+                            <i class="fas fa-volume-up"></i> <span id="volume-percent">80%</span>
+                        </div>
+                        <div id="brightness-indicator" class="video-ui-indicator">
+                            <i class="fas fa-sun"></i> <span id="brightness-percent">100%</span>
+                        </div>
+                        <div id="seek-indicator" class="video-ui-indicator">
+                            <i class="fas fa-forward"></i> <span id="seek-text">+10s</span>
+                        </div>
+                    </div>
+
+                    <div class="current-meta">
+                        <div class="meta-text">
+                            <h1 id="track-title">Welcome to VS Player <span class="info-tag">4K</span> <span
+                                    class="info-tag">H.265</span></h1>
+                            <p id="track-artist">Add some tunes to get started</p>
+                        </div>
+                        <div class="meta-actions">
+                            <button id="add-sub-btn-dedicated" class="sub-icon-btn highlight" title="Add Subtitles">
+                                <i class="fas fa-closed-captioning"></i> Add Subtitle
+                            </button>
+                            <label for="sub-input" style="display:none;">
+                                <input type="file" id="sub-input"
+                                    accept=".vtt,.srt,.ass,.smi,.sub,.idx,.lrc,.mks,.txt,.sup,.usf,.ssf,.ssa,.smil,.s2k,.rt,.psb">
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Shared Controls (Inside Player Area for Fullscreen) -->
+                <footer class="player-controls">
+                    <div class="progress-area">
+                        <span id="time-current">0:00</span>
+                        <div class="progress-bar-bg" id="progress-container">
+                            <div class="progress-active" id="progress-bar"></div>
+                        </div>
+                        <span id="time-total">0:00</span>
+                    </div>
+
+                    <div class="controls-grid">
+                        <div class="extra-btns left">
+                            <button id="shuffle-btn" title="Shuffle"><i class="fas fa-random"></i></button>
+                        </div>
+
+                        <div class="playback-btns">
+                            <button id="prev-btn" title="Previous"><i class="fas fa-step-backward"></i></button>
+                            <button id="play-pause-btn" class="main-play" title="Play">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button id="next-btn" title="Next"><i class="fas fa-step-forward"></i></button>
+                        </div>
+
+                        <div class="volume-btns right">
+                            <i class="fas fa-volume-up" id="mute-btn"></i>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.8">
+                            <button id="loop-btn" title="Loop"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div class="brand">
+                    <span class="logo">VS</span> ULTIMATE
+                </div>
+                <h2>MultiPlayer v2.0</h2>
+            </div>
+            <div class="modal-body">
+                <p>Designed By <strong>Viraj Sanjeewa</strong> (© VS Entertainment.)</p>
+
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Professional Media Engine (4K, x265,
+                        HEVC Support)</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Advanced Subtitle Customization (Font,
+                        Color, Sync)</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> 10-Band Professional Equalizer</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> A-B Repeat & Playback Speed Control
+                        (0.25x - 4x)</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> DVD & Multi-Format Support (.vob,
+                        .mkv, .ts, etc.)</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> 360° Video & VR Ready Interface</div>
+                </div>
+
+                <div class="license-section">
+                    <h3>Commercial & Privacy License</h3>
+                    <div class="license-text">
+                        <p>This software, "VS Ultimate MultiPlayer", is the intellectual property of Viraj Sanjeewa and
+                            VS Entertainment. Usage is permitted for personal and educational purposes.</p>
+                        <p><strong>Prohibited Actions:</strong> Reverse engineering, unauthorized distribution, or
+                            removing copyright marks. Any commercial use requires written consent from the developer.
+                        </p>
+                        <p><strong>Privacy:</strong> This player operates entirely offline and does not collect or
+                            transmit user data. Local storage is used only for playback resume functionality.</p>
+                        <p>© VS Entertainment. All rights reserved globally.</p>
+                    </div>
+                </div>
+
+                <div class="footer-note">
+                    <p>Designed with ❤️ for a better media experience.</p>
+                    <p>Made With In Sri Lanka.</p>
+                </div>
             </div>
         </div>
-    </footer>
-    
-    <script src="landing-page.js"></script>
+    </div>
+
+    <!-- Equalizer Modal -->
+    <div id="eq-modal" class="modal">
+        <div class="modal-content eq-content">
+            <span class="close-modal" id="close-eq">&times;</span>
+            <div class="modal-header">
+                <h3><i class="fas fa-sliders-h"></i> Professional Equalizer</h3>
+                <p>Fine-tune your audio experience</p>
+            </div>
+            <div class="eq-grid" id="equalizer-controls">
+                <!-- EQ Sliders injected by JS -->
+            </div>
+            <div class="eq-presets">
+                <button class="preset-btn" data-preset="reset">Reset</button>
+                <button class="preset-btn" data-preset="bass">Bass</button>
+                <button class="preset-btn" data-preset="pop">Pop</button>
+                <button class="preset-btn" data-preset="rock">Rock</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subtitle Search Modal -->
+    <div id="sub-search-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-sub-search">&times;</span>
+            <div class="modal-header">
+                <h3><i class="fas fa-search"></i> Subtitle Search</h3>
+            </div>
+            <div class="search-box">
+                <input type="text" id="sub-search-query" placeholder="Movie or series name...">
+                <button id="sub-search-go" class="main-btn">Find Subs</button>
+            </div>
+            <div id="sub-search-results" class="results-container">
+                <p class="hint">Search results will appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Audio/Logic Elements -->
+    <audio id="main-audio"></audio>
+    <div id="custom-subtitles" class="custom-subtitle-overlay"></div>
+    <script src="script.js"></script>
 </body>
 
 </html>
